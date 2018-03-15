@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">FinDoctor</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main">FinDoctor</string>
+    <string name="title_activity_chat">Chat</string>
+    <string name="title_activity_account">Account</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="auth_failed">Failed</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu">MenuActivity</string>
+
+    <string-array name="jenis_user_array">
+        <item>Dokter</item>
+        <item>Pasien</item>
+        <item>Asisten Dokter</item>
+    </string-array>
+
+    <string-array name="jenis_klinik_array">
+        <item>Mandiri</item>
+        <item>Bersama</item>
+    </string-array>
+
+    <string name="title_activity_register">Register</string>
+
+    <string name="Senin">Senin</string>
+    <string name="Selasa">Selasa</string>
+    <string name="Rabu">Rabu</string>
+    <string name="Kamis">Kamis</string>
+    <string name="Jumat">Jumat</string>
+    <string name="Sabtu">Sabtu</string>
+    <string name="Minggu">Minggu</string>
+    <string name="title_activity_chat_menu">ChatMenuActivity</string>
+    <string name="title_activity_maps_new">MapsActivityNew</string>
+    <string name="title_activity_detail_klinik_dokter">DetailKlinikDokter</string>
+    <string name="title_activity_add_waktu">AddWaktuActivity</string>
+    <string name="title_activity_rekam_medik">RekamMedikActivity</string>
+    <string name="title_activity_add_rekam_medik">Tambah Rekam Medik</string>
+    <string name="title_activity_content_search">ContentSearch</string>
+    <string name="thumbnail">thumbnail</string>
+    <string name="title_activity_search">Cari Dokter</string>
+    <string name="title_activity_search_dokter_new">SearchDokterActivityNew</string>
+    <string name="title_activity_detil_rekam_medik">DetilRekamMedikActivity</string>
+    <string name="title_activity_chat_user">ChatUserActivity</string>
+    <string name="title_activity_pick_user_chat">PickUserChatActivity</string>
+    <string name="title_activity_detail_dokter">DetailDokterActivity</string>
+    <string name="permission_denied_explanation">Location turned off</string>
+    <string name="settings">Change Setting</string>
+    <string name="no_location_detected">Location unavailable</string>
+    <string name="permission_rationale">Permission</string>
+    <string name="title_activity_dokter_favorit">DokterFavoritActivity</string>
+    <string name="title_activity_asisten_dokter">AsistenDokterActivity</string>
+    <string name="title_activity_add_asisten">Tambah Asisten</string>
+
+</resources>

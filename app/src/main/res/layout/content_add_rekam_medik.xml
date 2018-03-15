@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_add_rekam_medik"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/tw__solid_white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.project.ta.findoctor.Activity.AddRekamMedikActivity"
+    tools:showIn="@layout/activity_add_rekam_medik">
+
+    <TextView
+        android:text="Nama Pasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/namapasienrekam"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <AutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pasien_autocomplete"
+        android:layout_below="@+id/namapasienrekam"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Nama Dokter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/namadokterrekam"
+        android:layout_weight="1"
+        android:layout_below="@+id/pasien_autocomplete"
+        android:layout_alignParentStart="true"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nama_dokter"
+        android:layout_below="@+id/namadokterrekam"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Diagnosa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView13"
+        android:layout_below="@+id/nama_dokter"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text|textMultiLine"
+        android:ems="10"
+        android:id="@+id/formdiagnosa"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:minLines="1"
+        android:maxLines="3"/>
+
+    <TextView
+        android:text="Penanganan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView15"
+        android:layout_below="@+id/formdiagnosa"
+        android:layout_alignParentStart="true"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text|textMultiLine"
+        android:ems="10"
+        android:id="@+id/formpenanganan"
+        android:layout_below="@+id/textView15"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Keterangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView16"
+        android:layout_below="@+id/formpenanganan"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text|textMultiLine"
+        android:ems="10"
+        android:id="@+id/formketerangan"
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:text="Tanggal Periksa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/formketerangan"
+        android:layout_alignParentStart="true"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/tanggal_periksa_text"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="yyyy-mm-dd" />
+
+    <TextView
+        android:text="Klinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/tanggal_periksa_text"
+        android:layout_alignParentStart="true"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:id="@+id/klinik_spinner" />
+
+    <Button
+        android:text="Simpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/simpanrekam"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+

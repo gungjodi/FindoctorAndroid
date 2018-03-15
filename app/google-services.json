@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1008364096567",
+    "firebase_url": "https://findoctor-142603.firebaseio.com",
+    "project_id": "findoctor-142603",
+    "storage_bucket": "findoctor-142603.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008364096567:android:4fd27ac2bf7bdc49",
+        "android_client_info": {
+          "package_name": "com.project.ta.findoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008364096567-esva9i9qjmu8a4kl39ng3n4t4t343c1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFD8DdT6KaJZAzNSs5a0F27aLZmcZCdRk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

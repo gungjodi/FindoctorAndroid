@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/no_antrian_lv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="0"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nama_pasien_lv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/no_antrian_lv_text"
+        android:text="Nama "
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no_antrian_lv_text"
+        android:layout_marginTop="5dp"
+        android:text="Waktu Registrasi :"
+        android:textSize="12sp"
+        android:layout_alignStart="@+id/textView31" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView29"
+        android:layout_alignBottom="@+id/textView29"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:text="Waktu Proses : "
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:layout_alignStart="@+id/nama_pasien_lv_text" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView31"
+        android:layout_alignBottom="@+id/textView31"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:text="Waktu Selesai"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/status_antrian_lv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/nama_pasien_lv_text"
+        android:layout_marginRight="5dp"
+        android:text="OPEN"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/waktu_registrasi_lv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView29"
+        android:text="TextView"
+        android:textSize="12sp"
+        android:layout_alignStart="@+id/textView29" />
+
+    <TextView
+        android:id="@+id/waktu_proses_lv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/status_antrian_lv_text"
+        android:layout_below="@+id/textView29"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:layout_alignStart="@+id/textView29" />
+
+    <TextView
+        android:id="@+id/waktu_selesai_lv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView29"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        android:layout_alignStart="@+id/textView32"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

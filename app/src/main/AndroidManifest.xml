@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.ta.findoctor">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".Services.MyFirebaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <service android:name=".Services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Services.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activity.SplashScreen"
+            android:label="FinDoctor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.MenuActivity"
+            android:label="FinDoctor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Activity.AccountActivity"
+            android:label="@string/title_activity_account"
+            android:parentActivityName=".Activity.MenuActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.MenuActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.project.ta.findoctor.Activity.MenuActivity" />
+
+        <activity
+            android:name=".Activity.ChatMenuActivity"
+            android:label="@string/title_activity_chat_menu"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activity.MapsActivity"
+            android:label="Map Dokter"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.MenuActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.DetailKlinikDokterActivity"
+            android:label="Klinik Dokter Detail"
+            android:parentActivityName=".Activity.MapsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.MapsActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.AddWaktuActivity"
+            android:label="Ubah Waktu Praktik"
+            android:parentActivityName=".Activity.DetailKlinikDokterActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.DetailKlinikDokterActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.RekamMedikActivity"
+            android:label="Rekam Medik"
+            android:parentActivityName=".Activity.MenuActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.MenuActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.AddRekamMedikActivity"
+            android:label="@string/title_activity_add_rekam_medik"
+            android:parentActivityName=".Activity.RekamMedikActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.RekamMedikActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.SearchDokterActivity"
+            android:label="@string/title_activity_search_dokter_new"
+            android:parentActivityName=".Activity.MenuActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.MenuActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.DetailRekamMedikActivity"
+            android:label="@string/title_activity_detil_rekam_medik"
+            android:parentActivityName=".Activity.RekamMedikActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.RekamMedikActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.ChatUserActivity"
+            android:label="@string/title_activity_chat_user"
+            android:parentActivityName=".Activity.ChatMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.ChatMenuActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.PickDokterChatActivity"
+            android:label="@string/title_activity_pick_user_chat"
+            android:parentActivityName=".Activity.ChatMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.ChatMenuActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.DetailDokterActivity"
+            android:label="@string/title_activity_detail_dokter"
+            android:parentActivityName=".Activity.SearchDokterActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.SearchDokterActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.DokterFavoritActivity"
+            android:label="@string/title_activity_dokter_favorit"
+            android:parentActivityName=".Activity.MenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.MenuActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.AsistenDokterActivity"
+            android:label="@string/title_activity_asisten_dokter"
+            android:parentActivityName=".Activity.MenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.MenuActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.AddAsistenActivity"
+            android:label="@string/title_activity_add_asisten"
+            android:parentActivityName=".Activity.AsistenDokterActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.ta.findoctor.Activity.AsistenDokterActivity" />
+        </activity>
+    </application>
+
+</manifest>

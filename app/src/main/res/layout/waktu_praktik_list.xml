@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hari_buka_text"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/jam_buka_text"
+            android:layout_below="@+id/hari_buka_text"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:text="A"
+            android:textAlignment="textStart"
+            android:layout_marginLeft="30dp"/>
+
+        <TextView
+            android:text="-"
+            android:layout_height="wrap_content"
+            android:id="@+id/minus"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/hari_buka_text"
+            android:layout_toEndOf="@+id/jam_buka_text"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/jam_tutup_text"
+            android:text="B"
+            android:textAlignment="viewStart"
+            android:layout_below="@+id/hari_buka_text"
+            android:layout_toEndOf="@+id/minus"
+            android:layout_marginLeft="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_antrian_text"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/jam_buka_text"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_antrian_inlist"
+            android:textAlignment="textEnd"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/antrian_terakhir_inlist"
+            android:layout_toEndOf="@+id/jam_tutup_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/antrian_terakhir_inlist"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBaseline="@+id/hari_buka_text"
+            android:layout_alignBottom="@+id/hari_buka_text"
+            android:layout_toEndOf="@+id/hari_buka_text" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Akun Saya" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="Peta" />
+        <item
+            android:title="Cari Dokter"
+            android:id="@+id/nav_cari_dokter"
+            android:icon="@android:drawable/ic_menu_search"/>
+        <item
+            android:title="Dokter Favorit"
+            android:id="@+id/nav_dokter_favorit"
+            android:icon="@android:drawable/btn_star_big_off"/>
+        <item
+            android:id="@+id/nav_asisten_dokter"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="Asisten Dokter" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@android:drawable/stat_notify_chat"
+            android:title="Chat" />
+        <item
+            android:title="Rekam Medik"
+            android:id="@+id/nav_rekam_medik"
+            android:icon="?android:attr/actionModeFindDrawable"/>
+        <item
+            android:id="@+id/nav_registrasi_pasien"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="Registrasi Pasien" />
+    </group>
+
+
+</menu>

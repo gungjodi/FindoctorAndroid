@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.project.ta.findoctor.Activity.DetailDokterActivity"
+    tools:showIn="@layout/activity_detail_dokter">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <ImageView
+            android:id="@+id/photo_dokter"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/header_cover_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-60dp"
+            android:elevation="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/doctor" />
+
+        <RelativeLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0099ff"
+            android:elevation="4dp"
+            android:paddingBottom="24dp"
+            android:layout_below="@+id/header_cover_image">
+
+
+            <TextView
+                android:id="@+id/nama_dokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="76dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/kategori_dokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nama_dokter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text=""
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/nama_dokter"
+                android:layout_marginEnd="17dp"
+                android:background="@android:drawable/btn_star_big_off"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/klinik_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/header_cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/navigation_header_image"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

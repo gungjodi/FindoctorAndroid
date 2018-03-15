@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/klinik_aktif_spinner"
+        android:layout_width="197dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/nama_dokter_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/set_next_antrian_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView27"
+        android:layout_toStartOf="@+id/klinik_aktif_spinner"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView30"
+        android:layout_marginTop="5dp"
+        android:background="@color/wallet_bright_foreground_holo_dark"
+        android:text="Antrian"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/set_next_antrian_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Next Antrian"
+        android:textSize="12sp" android:background="@color/colorPrimary"
+        android:textColor="@color/tw__solid_white"
+        android:layout_below="@+id/klinik_aktif_spinner"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/textView25"
+        android:layout_toEndOf="@+id/nama_dokter_text" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Antrian Aktif"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/klinik_aktif_spinner"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Total Antrian"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView27"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/antrian_aktif_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:text="0"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/textView27"
+        android:layout_alignBottom="@+id/textView27"
+        android:layout_toEndOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/total_antrian_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/textView30"
+        android:layout_alignBottom="@+id/textView30"
+        android:layout_alignStart="@+id/antrian_aktif_text" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swiperefreshantrian"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="@color/wallet_bright_foreground_holo_dark"
+        android:layout_below="@+id/textView25">
+
+        <ListView
+            android:id="@+id/antrian_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_pasien_antrian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

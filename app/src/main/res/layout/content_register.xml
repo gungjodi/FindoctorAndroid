@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.project.ta.findoctor.Activity.RegisterActivity"
+    tools:showIn="@layout/activity_register">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/s_email"
+        android:hint="Email"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/s_password"
+        android:hint="Password"
+        android:layout_below="@+id/s_email"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/s_password_confirm"
+        android:hint="Confirm Password"
+        android:layout_below="@+id/s_password"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/nama_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/s_password_confirm"
+        android:ems="10"
+        android:hint="Nama"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/tempat_lahir"
+        android:hint="Tempat Lahir"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/nama_text"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/tgl_lahir"
+        android:hint="Tanggal Lahir"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tempat_lahir"
+        android:layout_weight="1"
+        android:inputType="none|date" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/no_telp"
+        android:hint="No Telp"
+        android:layout_below="@+id/tgl_lahir"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/jenis_user"
+        android:layout_height="40dp"
+        android:layout_below="@+id/no_telp"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/kategori_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/jenis_user" />
+
+    <Button
+        android:id="@+id/do_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:background="@color/colorAccent"
+        android:text="Register"
+        android:textColor="@color/tw__solid_white" />
+</RelativeLayout>

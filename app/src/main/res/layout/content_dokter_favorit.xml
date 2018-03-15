@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.project.ta.findoctor.Activity.DokterFavoritActivity"
+    tools:showIn="@layout/activity_dokter_favorit">
+    <Button
+        android:text="Search"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/refresh_data"
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/TFsearch"
+        android:layout_above="@+id/map"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/search" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refresh_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="@color/wallet_bright_foreground_holo_dark"
+        android:layout_below="@+id/TFsearch">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/searchdokter_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:layout_weight="1"
+            android:layout_below="@+id/TFsearch" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
